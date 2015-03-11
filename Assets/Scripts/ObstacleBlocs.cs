@@ -27,7 +27,9 @@ public class ObstacleBlocs : MonoBehaviour {
 	{
 		if (other.tag == "Player" && !playerDamage.isDead) 
 		{
+			player.audio.Play();
 			playerDamage.Death();
+
 		//	Application.LoadLevel("LevelMenu");
 		}
 	}

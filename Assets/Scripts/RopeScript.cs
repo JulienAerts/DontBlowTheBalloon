@@ -101,7 +101,7 @@ public class RopeScript : MonoBehaviour {
 		
 		// Find the amount of segments based on the distance and resolution
 		// Example: [resolution of 1.0 = 1 joint per unit of distance]
-		segments = 4;
+		segments = 6;
 		line.SetVertexCount(segments);
 		segmentPos = new Vector3[segments];
 		joints = new GameObject[segments];
