@@ -64,14 +64,7 @@ public class RopeScript : MonoBehaviour {
 		
 		
 		//Destroy Rope Test	(Example of how you can use the rope dynamically)
-		if(rope && Input.GetKeyDown("d"))
-		{
-			DestroyRope();	
-		}	
-		if(!rope && Input.GetKeyDown("r"))
-		{
-			BuildRope();
-		}
+
 	}
 	void LateUpdate()
 	{
@@ -175,7 +168,7 @@ public class RopeScript : MonoBehaviour {
 		
 	}
 	
-	void DestroyRope()
+	public void DestroyRope()
 	{
 		// Stop Rendering Rope then Destroy all of its components
 		rope = false;
