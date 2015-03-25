@@ -24,4 +24,13 @@ public class GameOverManager : MonoBehaviour {
 		anim.SetTrigger ("GameOver");
 	}
 
+	public void Recommencer()
+	{
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
+	public void Menu()
+	{
+		Application.LoadLevel ("LevelMenu");
+	}
 }

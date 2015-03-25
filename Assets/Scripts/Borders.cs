@@ -3,11 +3,23 @@ using System.Collections;
 
 public class Borders : MonoBehaviour {
 
+	PlayerScript playerDamage;
+	GameObject player;
+
+	void Start () 
+	{
+		player = GameObject.FindGameObjectWithTag ("Player");
+		playerDamage = player.GetComponent<PlayerScript> ();
+	}
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Player") 
+		if (other.tag == "Player" && !playerDamage.isDead) 
 		{
-			Application.LoadLevel("LevelMenu");
+			player.audio.Play();
+			playerDamage.Death();
+			
+			//	Application.LoadLevel("LevelMenu");
 		}
 	}
 }

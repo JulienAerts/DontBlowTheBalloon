@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour{
 		{
 			Physics2D.gravity *= -1;
 		}
+
 	}
 
 	void Update()
@@ -64,7 +65,7 @@ public class PlayerScript : MonoBehaviour{
 		isDead = true;
 		currentHealth = 0;
 		ObstacleBlocs.speed = 0f;
-
+		rigidbody2D.isKinematic = true;
 	}
 
 
